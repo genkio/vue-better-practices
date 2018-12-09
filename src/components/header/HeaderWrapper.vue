@@ -1,8 +1,9 @@
 <template lang="html">
   <div class="wrapper">
     <div class="columns is-mobile">
-      <slot/>
+      <slot name="main"></slot>
     </div>
+    <slot name="sub-header"></slot>
   </div>
 </template>
 
@@ -13,8 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-  padding-bottom: 1rem;
+.columns {
   border-bottom: 1px solid #eee;
 }
 </style>
