@@ -1,15 +1,17 @@
 <template lang="html">
   <div>
-    <h2>Timeline</h2>
-    <p>
-      Go to <router-link to="/items/1">details</router-link>
-    </p>
+    <timeline-header/>
   </div>
 </template>
 
 <script>
+import TimelineHeader from '../components/header/TimelineHeader'
+
 export default {
-  name: 'Timeline'
+  name: 'Timeline',
+  components: {
+    TimelineHeader
+  }
 }
 </script>
 

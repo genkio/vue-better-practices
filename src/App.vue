@@ -1,14 +1,26 @@
 <template lang="html">
-  <div>
-    <router-view/>
+  <div class="columns">
+    <full-height-wrapper class="column is-6 is-offset-3">
+      <router-view/>
+    </full-height-wrapper>
   </div>
 </template>
 
 <script>
+import FullHeightWrapper from './components/common/FullHeightWrapper'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    FullHeightWrapper
+  }
 }
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+@import './styles/main.scss';
+
+.column {
+  background: $white;
+}
 </style>
