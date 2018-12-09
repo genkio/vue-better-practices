@@ -1,6 +1,7 @@
 <template lang="html">
-  <div class="columns">
-    <full-height-wrapper class="column is-6 is-offset-3">
+  <div class="columns is-mobile">
+    <full-height-wrapper
+      class="column is-6-tablet is-offset-3-tablet is-12-mobile">
       <router-view/>
     </full-height-wrapper>
   </div>

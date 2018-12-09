@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="wrapper">
-    <div class="columns">
+    <div class="columns is-mobile">
       <slot/>
     </div>
   </div>
