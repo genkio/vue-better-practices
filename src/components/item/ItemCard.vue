@@ -2,19 +2,19 @@
   <router-link
     class="card is-block"
     :to="{ name: 'ItemDetail', params: { id: item.id } }">
-    <item-card-image
+    <ItemCardImage
       :img-url="item.image"
       :is-sold-out="item.isSoldOut">
-    </item-card-image>
+    </ItemCardImage>
     <div class="card-content">
       <div class="content">
         <h3 class="is-size-6 is-overflow-hidden">
           {{ item.description }}
         </h3>
-        <item-card-footer
+        <ItemCardFooter
           :price="item.price"
           :like-count="item.like_count">
-        </item-card-footer>
+        </ItemCardFooter>
       </div>
     </div>
   </router-link>

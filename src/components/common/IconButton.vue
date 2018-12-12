@@ -13,7 +13,9 @@
       :class="[isHovered ? 'has-text-grey' : 'has-text-grey-lighter']">
       <i :class="iconClass"></i>
     </span>
-    <span class="text is-size-7 has-text-grey" v-if="text">
+    <span
+      class="text is-size-7 has-text-grey"
+      v-if="text">
       {{ text }}
     </span>
   </a>

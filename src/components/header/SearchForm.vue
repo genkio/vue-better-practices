@@ -1,7 +1,10 @@
 <template lang="html">
   <form>
     <div class="control">
-      <input class="input" type="text" :placeholder="placeholder">
+      <input
+        class="input"
+        type="text"
+        :placeholder="placeholder">
     </div>
   </form>
 </template>
@@ -13,7 +16,7 @@ export default {
     placeholder: {
       type: String,
       required: false,
-      default: () => ''
+      default: ''
     }
   }
 }

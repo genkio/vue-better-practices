@@ -1,15 +1,15 @@
 <template lang="html">
   <div>
-    <detail-header :title="activeItem.description"></detail-header>
-    <detail-image :img-url="activeItem.image"></detail-image>
-    <detail-body :item="activeItem"></detail-body>
-    <detail-footer
+    <DetailHeader :title="activeItem.description"></DetailHeader>
+    <DetailImage :img-url="activeItem.image"></DetailImage>
+    <DetailBody :item="activeItem"></DetailBody>
+    <DetailFooter
       :id="activeItem.id"
       :price="activeItem.price"
       :shipping-fee="activeItem.shippingFee"
       :is-sold-out="activeItem.isSoldOut"
       v-if="!activeItem.isSoldOut">
-    </detail-footer>
+    </DetailFooter>
   </div>
 </template>
 

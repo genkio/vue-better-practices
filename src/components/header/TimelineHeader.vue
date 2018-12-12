@@ -1,33 +1,30 @@
 <template lang="html">
-  <header-wrapper>
+  <HeaderWrapper>
     <template slot="main">
       <div class="column is-1">
-        <icon-button
+        <IconButton
           icon="bars"
-          :on-click="onToggleSidebarMenu">
-        </icon-button>
+          :on-click="onToggleSidebarMenu"/>
       </div>
       <div class="column is-9">
-        <search-form placeholder="Search"/>
+        <SearchForm placeholder="Search"/>
       </div>
       <div class="column is-1">
-        <icon-button
+        <IconButton
           icon="bell"
-          :on-click="onToggleNotification">
-        </icon-button>
+          :on-click="onToggleNotification"/>
       </div>
       <div class="column is-1 pl-0">
-        <icon-button
+        <IconButton
           icon="check"
-          :on-click="onToggleTodoList">
-        </icon-button>
+          :on-click="onToggleTodoList"/>
       </div>
     </template>
-    <category-sub-header
+    <CategorySubHeader
       slot="sub-header"
       :categories="categories">
-    </category-sub-header>
-  </header-wrapper>
+    </CategorySubHeader>
+  </HeaderWrapper>
 </template>
 
 <script>

@@ -5,8 +5,8 @@
     <h3 class="is-size-5">
       {{ item.description }}
     </h3>
-    <detail-controls :like-count="item.like_count"></detail-controls>
-    <detail-description :description="item.description"></detail-description>
+    <DetailControls :like-count="item.like_count"></DetailControls>
+    <DetailDescription :description="item.description"></DetailDescription>
   </div>
 </template>
 

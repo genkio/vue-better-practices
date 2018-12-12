@@ -1,10 +1,16 @@
 <template lang="html">
   <div class="card-image">
-    <div class="sold-flag" v-if="isSoldOut">
-      <span class="sold-flag-label is-uppercase has-text-weight-bold">sold</span>
+    <div
+      class="sold-flag"
+      v-if="isSoldOut">
+      <span class="sold-flag-label is-uppercase has-text-weight-bold">
+        sold
+      </span>
     </div>
     <figure class="image is-4by3">
-      <img :src="imgUrl" alt="Shop item image">
+      <img
+        :src="imgUrl"
+        alt="Shop item image">
     </figure>
   </div>
 </template>

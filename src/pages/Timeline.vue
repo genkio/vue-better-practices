@@ -1,11 +1,11 @@
 <template lang="html">
   <div>
-    <timeline-header :categories="categories"></timeline-header>
-    <item-card-list :items="items"></item-card-list>
-    <sell-button
+    <TimelineHeader :categories="categories"></TimelineHeader>
+    <ItemCardList :items="items"></ItemCardList>
+    <SellButton
       class="sell-button"
       :on-click="onSell">
-    </sell-button>
+    </SellButton>
   </div>
 </template>
 

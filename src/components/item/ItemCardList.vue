@@ -3,7 +3,7 @@
     <div class="column is-half"
          v-for="item in items"
          :key="item.id">
-      <item-card :item="item"/>
+      <ItemCard :item="item"/>
     </div>
   </div>
 </template>

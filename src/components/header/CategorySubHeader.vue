@@ -1,6 +1,6 @@
 <template lang="html">
   <ul class="category-list">
-    <category-item
+    <CategoryItem
       v-for="cat in categories"
       :item="cat"
       :key="cat.id"/>

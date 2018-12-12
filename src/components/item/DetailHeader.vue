@@ -1,28 +1,26 @@
 <template lang="html">
-  <header-wrapper>
+  <HeaderWrapper>
     <template slot="main">
       <div class="column is-1">
-        <icon-button
+        <IconButton
           icon="chevron-left"
-          :on-click="onBack">
+          :on-click="onBack"/>
       </div>
       <div class="column is-9">
-        <header-title :title="title"/>
+        <HeaderTitle :title="title"/>
       </div>
       <div class="column is-1">
-        <icon-button
+        <IconButton
           icon="search"
-          :on-click="onSearch">
-        </icon-button>
+          :on-click="onSearch"/>
       </div>
       <div class="column is-1 pl-0">
-        <icon-button
+        <IconButton
           icon="share"
-          :on-click="onToggleShare">
-        </icon-button>
+          :on-click="onToggleShare"/>
       </div>
     </template>
-  </header-wrapper>
+  </HeaderWrapper>
 </template>
 
 <script>

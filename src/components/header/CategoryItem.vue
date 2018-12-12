@@ -1,6 +1,6 @@
 <template lang="html">
   <li class="category-item">
-    <a href="#" class="has-text-grey">
+    <a class="has-text-grey">
       {{ item.name }}
     </a>
   </li>

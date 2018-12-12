@@ -1,33 +1,30 @@
 <template lang="html">
   <div class="control-wrapper">
     <div>
-      <icon-button
+      <IconButton
         text="Like!"
         icon="heart"
         :has-background="true"
         :is-rounded="true"
-        :on-click="toggleLike"
-      >
-      </icon-button>
+        :on-click="toggleLike">
+      </IconButton>
       <span class="like-count">
         {{ likeCount }}
       </span>
-      <icon-button
+      <IconButton
         text="Comment"
         icon="comment-alt"
         :has-background="true"
         :is-rounded="true"
-        :on-click="toggleComment"
-      >
-      </icon-button>
+        :on-click="toggleComment">
+      </IconButton>
     </div>
-    <icon-button
+    <IconButton
       icon="flag"
       :has-background="true"
       :is-circle="true"
-      :on-click="toggleFlag"
-    >
-    </icon-button>
+      :on-click="toggleFlag">
+    </IconButton>
   </div>
 </template>
 
@@ -35,7 +32,7 @@
 import IconButton from '../common/IconButton'
 
 export default {
-  name: 'TogglesPanel',
+  name: 'DetailControls',
   props: {
     likeCount: {
       type: Number,
