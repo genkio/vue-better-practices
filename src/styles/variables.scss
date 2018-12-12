@@ -1,4 +1,9 @@
 /**
-* Customize bluma framework style
-*/
-$body-background-color: #f5f5f5;
+ * Application specific colors
+ */
+$brand-grey: #f5f5f5;
+
+/**
+ * Customize bluma framework style
+ */
+$body-background-color: $brand-grey;

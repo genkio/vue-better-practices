@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="item-card-footer">
+  <div class="wrapper">
     <span class="price has-text-weight-bold">
       {{ price | currency }}
     </span>
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item-card-footer {
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;

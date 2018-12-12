@@ -2,9 +2,18 @@ const state = getDefaultState()
 
 const getters = {}
 
-const actions = {}
+const actions = {
+  getActiveShopItem ({ commit, state }, id) {
+    const activeItem = state.items.find(i => i.id === id)
+    commit('setActiveShopItem', activeItem)
+  }
+}
 
-const mutations = {}
+const mutations = {
+  setActiveShopItem (state, item) {
+    state.activeItem = item
+  }
+}
 
 export default {
   namespaced: true,
@@ -16,6 +25,7 @@ export default {
 
 function getDefaultState () {
   return {
+    activeItem: null,
     items: [
       {
         "id": "1",
