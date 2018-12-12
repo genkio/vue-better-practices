@@ -1,2 +1,5 @@
 .cache
+.firebaserc
 dist
+.runtimeconfig.json
+firebase-debug.log
