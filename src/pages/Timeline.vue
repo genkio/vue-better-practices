@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <TimelineHeader :categories="categories"></TimelineHeader>
-    <ItemCardList :items="items"></ItemCardList>
+    <ItemCardList :items="shopItems"></ItemCardList>
     <SellButton
       class="sell-button"
       :on-click="onSell">
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     ...mapState('category', ['categories']),
-    ...mapState('item', ['items'])
+    ...mapState('shopItem', ['shopItems'])
   },
   methods: {
     onSell () {}

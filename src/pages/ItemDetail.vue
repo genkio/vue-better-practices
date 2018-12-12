@@ -33,7 +33,7 @@ export default {
     this.getActiveShopItem(this.id)
   },
   computed: {
-    ...mapState('item', ['activeItem'])
+    ...mapState('shopItem', ['activeItem'])
   },
   methods: {
     ...mapActions('item', ['getActiveShopItem'])
