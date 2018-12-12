@@ -1,20 +1,14 @@
 <template lang="html">
   <div class="columns is-mobile">
-    <full-height-wrapper
-      class="column is-6-tablet is-offset-3-tablet is-12-mobile">
+    <div class="column is-6-tablet is-offset-3-tablet is-12-mobile">
       <router-view/>
-    </full-height-wrapper>
+    </div>
   </div>
 </template>
 
 <script>
-import FullHeightWrapper from './components/common/FullHeightWrapper'
-
 export default {
-  name: 'App',
-  components: {
-    FullHeightWrapper
-  }
+  name: 'App'
 }
 </script>
 

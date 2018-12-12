@@ -42,15 +42,19 @@ export default {
   padding: 0 .5rem;
   position: fixed;
   bottom: 0;
-  width: 50%;
+  width: 51%;
   min-height: 4rem;
   background: $dark;
   margin: 0 -.75rem;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
 
 .button {
-  color: $white;
   border: none;
+  color: $white;
   background: $orange;
 }
 </style>

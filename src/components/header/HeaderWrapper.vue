@@ -14,6 +14,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  padding-top: 1rem;
+}
+
 .columns {
   border-bottom: 1px solid #eee;
 }
