@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'ItemImage',
+  name: 'ItemCardImage',
   props: {
     imgUrl: {
       type: String,

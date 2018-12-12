@@ -1,27 +1,31 @@
 <template lang="html">
-  <div class="card">
-    <item-image
+  <router-link
+    class="card is-block"
+    :to="{ name: 'ItemDetail', params: { id: item.id } }">
+    <item-card-image
       :img-url="item.image"
       :is-sold-out="item.isSoldOut">
-    </item-image>
+    </item-card-image>
     <div class="card-content">
       <div class="content">
-        <h3 class="is-size-6">{{ item.description }}</h3>
-        <item-footer
+        <h3 class="is-size-6 is-overflow-hidden">
+          {{ item.description }}
+        </h3>
+        <item-card-footer
           :price="item.price"
           :like-count="item.like_count">
-        </item-footer>
+        </item-card-footer>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
-import ItemImage from './ItemImage'
-import ItemFooter from './ItemFooter'
+import ItemCardImage from './ItemCardImage'
+import ItemCardFooter from './ItemCardFooter'
 
 export default {
-  name: 'ShopItem',
+  name: 'ItemCard',
   props: {
     item: {
       type: Object,
@@ -29,8 +33,8 @@ export default {
     }
   },
   components: {
-    ItemImage,
-    ItemFooter
+    ItemCardImage,
+    ItemCardFooter
   }
 }
 </script>
@@ -38,10 +42,5 @@ export default {
 <style lang="scss" scoped>
 .card-content {
   padding: .5rem;
-
-  h3 {
-    white-space: nowrap;
-    overflow: hidden;
-  }
 }
 </style>

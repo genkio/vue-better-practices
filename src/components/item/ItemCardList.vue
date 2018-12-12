@@ -3,16 +3,16 @@
     <div class="column is-half"
          v-for="item in items"
          :key="item.id">
-      <shop-item :item="item"/>
+      <item-card :item="item"/>
     </div>
   </div>
 </template>
 
 <script>
-import ShopItem from './ShopItem'
+import ItemCard from './ItemCard'
 
 export default {
-  name: 'ItemList',
+  name: 'ItemCardList',
   props: {
     items: {
       type: Array,
@@ -20,7 +20,7 @@ export default {
     }
   },
   components: {
-    ShopItem
+    ItemCard
   }
 }
 </script>

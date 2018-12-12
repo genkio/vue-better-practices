@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="item-footer">
+  <div class="item-card-footer">
     <span class="price has-text-weight-bold">
       {{ price | currency }}
     </span>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'ItemFooter',
+  name: 'ItemCardFooter',
   props: {
     price: {
       type: Number,
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item-footer {
+.item-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <timeline-header :categories="categories"></timeline-header>
-    <item-list :items="items"></item-list>
+    <item-card-list :items="items"></item-card-list>
   </div>
 </template>
 
@@ -9,13 +9,13 @@
 import { mapState } from 'vuex'
 
 import TimelineHeader from '../components/header/TimelineHeader'
-import ItemList from '../components/item/ItemList'
+import ItemCardList from '../components/item/ItemCardList'
 
 export default {
   name: 'Timeline',
   components: {
     TimelineHeader,
-    ItemList
+    ItemCardList,
   },
   computed: {
     ...mapState('category', ['categories']),
