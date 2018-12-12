@@ -2,16 +2,25 @@
   <header-wrapper>
     <template slot="main">
       <div class="column is-1">
-        <sidebar-menu-toggle/>
+        <icon-button
+          icon="bars"
+          :on-click="onToggleSidebarMenu">
+        </icon-button>
       </div>
       <div class="column is-9">
         <search-form placeholder="Search"/>
       </div>
       <div class="column is-1">
-        <notification-toggle/>
+        <icon-button
+          icon="bell"
+          :on-click="onToggleNotification">
+        </icon-button>
       </div>
       <div class="column is-1 pl-0">
-        <todo-list-toggle/>
+        <icon-button
+          icon="check"
+          :on-click="onToggleTodoList">
+        </icon-button>
       </div>
     </template>
     <category-sub-header
@@ -22,11 +31,9 @@
 </template>
 
 <script>
+import IconButton from '../common/IconButton'
 import HeaderWrapper from './HeaderWrapper'
 import SearchForm from './SearchForm'
-import SidebarMenuToggle from './SidebarMenuToggle'
-import NotificationToggle from './NotificationToggle'
-import TodoListToggle from './TodoListToggle'
 import CategorySubHeader from './CategorySubHeader'
 
 export default {
@@ -39,11 +46,14 @@ export default {
   },
   components: {
     HeaderWrapper,
+    IconButton,
     SearchForm,
-    SidebarMenuToggle,
-    NotificationToggle,
-    TodoListToggle,
     CategorySubHeader
+  },
+  methods: {
+    onToggleSidebarMenu () {},
+    onToggleNotification () {},
+    onToggleTodoList () {}
   }
 }
 </script>
