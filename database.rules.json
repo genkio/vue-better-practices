@@ -3,7 +3,7 @@
     ".read": false,
     ".write": false,
     "shop-items": {
-      ".indexOn": ["category_id"]
+      ".indexOn": ["id","category_id"]
     }
   }
 }

@@ -17,7 +17,6 @@ export default {
   name: 'DetailFooter',
   props: {
     id: {
-      type: String,
       required: true
     },
     price: {

@@ -14,4 +14,15 @@ router.get('/', async (req, res) => {
   }
 })
 
+router.get('/:id', async (req, res) => {
+  const { id: shopItemId } = req.params
+  try {
+    const [ shopItem ] = await Database.getDataByProp('shop-items', 'id', Number(shopItemId))
+    res.status(200).json(shopItem)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).json(err.message)
+  }
+})
+
 module.exports = router

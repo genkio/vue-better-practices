@@ -15,7 +15,7 @@ const store = new Vuex.Store({
 
 store.watch(
   () => store.getters['category/activeCategoryId'],
-  id => store.dispatch('shopItem/getShopItems', id)
+  categoryId => store.dispatch('shopItem/getShopItems', categoryId)
 )
 
 export default store

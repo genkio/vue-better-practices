@@ -1,14 +1,14 @@
 <template lang="html">
-  <div>
-    <DetailHeader :title="activeItem.description"></DetailHeader>
-    <DetailImage :img-url="activeItem.image"></DetailImage>
-    <DetailBody :item="activeItem"></DetailBody>
+  <div v-if="activeShopItem">
+    <DetailHeader :title="activeShopItem.description"></DetailHeader>
+    <DetailImage :img-url="activeShopItem.image"></DetailImage>
+    <DetailBody :item="activeShopItem"></DetailBody>
     <DetailFooter
-      :id="activeItem.id"
-      :price="activeItem.price"
-      :shipping-fee="activeItem.shippingFee"
-      :is-sold-out="activeItem.isSoldOut"
-      v-if="!activeItem.isSoldOut">
+      :id="activeShopItem.id"
+      :price="activeShopItem.price"
+      :shipping-fee="activeShopItem.shippingFee"
+      :is-sold-out="activeShopItem.isSoldOut"
+      v-if="!activeShopItem.isSoldOut">
     </DetailFooter>
   </div>
 </template>
@@ -22,7 +22,11 @@ import DetailFooter from '../components/item/DetailFooter'
 
 export default {
   name: 'ItemDetail',
-  props: ['id'],
+  props: {
+    id: {
+      required: true
+    }
+  },
   components: {
     DetailHeader,
     DetailImage,
@@ -30,13 +34,16 @@ export default {
     DetailFooter
   },
   created () {
-    this.getActiveShopItem(this.id)
+    this.getShopItem(this.id)
+  },
+  beforeDestroy () {
+    this.clearActiveShopItem()
   },
   computed: {
-    ...mapState('shopItem', ['activeItem'])
+    ...mapState('shopItem', ['activeShopItem'])
   },
   methods: {
-    ...mapActions('item', ['getActiveShopItem'])
+    ...mapActions('shopItem', ['getShopItem', 'clearActiveShopItem'])
   }
 }
 </script>
