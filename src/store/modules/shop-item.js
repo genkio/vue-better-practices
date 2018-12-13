@@ -20,6 +20,9 @@ const actions = {
   },
   clearActiveShopItem ({ commit }) {
     commit('SET_ACTIVE_SHOP_ITEM', null)
+  },
+  searchShopItems ({ commit }, searchTerm) {
+    commit('SET_SHOP_ITEM_SEARCH_TERM', searchTerm)
   }
 }
 
@@ -29,6 +32,9 @@ const mutations = {
   },
   SET_ACTIVE_SHOP_ITEM (state, item) {
     state.activeShopItem = item
+  },
+  SET_SHOP_ITEM_SEARCH_TERM (state, searchTerm) {
+    state.shopItemSearchTerm = searchTerm
   }
 }
 
@@ -43,6 +49,7 @@ export default {
 function getDefaultState () {
   return {
     activeShopItem: null,
-    shopItems: []
+    shopItems: [],
+    shopItemSearchTerm: ''
   }
 }

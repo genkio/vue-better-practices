@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="columns is-multiline">
     <div class="column is-half"
-         v-for="item in items"
+         v-for="item in filteredShopItems"
          :key="item.id">
       <ItemCard :item="item"/>
     </div>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 import ItemCard from './ItemCard'
 
 export default {
@@ -21,6 +23,18 @@ export default {
   },
   components: {
     ItemCard
+  },
+  computed: {
+    ...mapState('shopItem', ['shopItemSearchTerm']),
+    filteredShopItems () {
+      return this.items
+        .filter(item => {
+          const nameMatched = item.name.indexOf(this.shopItemSearchTerm) >= 0
+          const descMatched = item.description.indexOf(this.shopItemSearchTerm) >= 0
+
+          return nameMatched || descMatched
+        })
+    }
   }
 }
 </script>

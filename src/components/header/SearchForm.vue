@@ -4,12 +4,15 @@
       <input
         class="input"
         type="text"
-        :placeholder="placeholder">
+        :placeholder="placeholder"
+        v-model="searchTerm">
     </div>
   </form>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'SearchForm',
   props: {
@@ -18,6 +21,19 @@ export default {
       required: false,
       default: ''
     }
+  },
+  data () {
+    return {
+      searchTerm: ''
+    }
+  },
+  watch: {
+    searchTerm () {
+      this.searchShopItems(this.searchTerm)
+    }
+  },
+  methods: {
+    ...mapActions('shopItem', ['searchShopItems'])
   }
 }
 </script>
