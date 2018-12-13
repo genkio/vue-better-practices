@@ -9,7 +9,7 @@
     <div class="card-content">
       <div class="content">
         <h3 class="is-size-6 is-overflow-hidden">
-          {{ item.description }}
+          {{ item.name }}
         </h3>
         <ItemCardFooter
           :price="item.price"

@@ -1,6 +1,6 @@
 <template lang="html">
   <div v-if="activeShopItem">
-    <DetailHeader :title="activeShopItem.description"></DetailHeader>
+    <DetailHeader :title="activeShopItem.name"></DetailHeader>
     <DetailImage :img-url="activeShopItem.image"></DetailImage>
     <DetailBody :item="activeShopItem"></DetailBody>
     <DetailFooter

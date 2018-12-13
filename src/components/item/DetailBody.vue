@@ -3,7 +3,7 @@
     class="wrapper"
     :class="{'is-sold-out': item.isSoldOut}">
     <h3 class="is-size-5">
-      {{ item.description }}
+      {{ item.name }}
     </h3>
     <DetailControls :like-count="item.like_count"></DetailControls>
     <DetailDescription :description="item.description"></DetailDescription>
