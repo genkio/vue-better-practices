@@ -1,4 +1,4 @@
-import category from '../../api/category'
+import api from '../../api/category'
 
 const state = getDefaultState()
 
@@ -8,15 +8,16 @@ const getters = {
 
 const actions = {
   getCategories ({ commit, state }) {
-    return category.fetchAll()
-      .then(data => {
-        const [ { id: defaultSelected } ] = data
-        commit('SET_CATEGORIES', data)
+    return api.fetchCategories()
+      .then(({ data: categories }) => {
+        const [ { id: defaultSelected } ] = categories
+        commit('SET_CATEGORIES', categories)
         if (!state.activeCategoryId) {
           commit('SET_ACTIVE_CATEGORY_ID', defaultSelected)
         }
       })
   },
+
   selectCategory ({ commit }, id) {
     commit('SET_ACTIVE_CATEGORY_ID', id)
   }
@@ -26,6 +27,7 @@ const mutations = {
   SET_CATEGORIES (state, categories) {
     state.categories = categories
   },
+
   SET_ACTIVE_CATEGORY_ID (state, id) {
     state.activeCategoryId = id
   }
