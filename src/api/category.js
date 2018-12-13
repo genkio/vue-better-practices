@@ -1,7 +1,7 @@
 import api from '.'
 
 export default {
-  fetchCategories () {
+  fetchAll () {
     return api.get('categories')
       .then(res => {
         if (!res.data) {

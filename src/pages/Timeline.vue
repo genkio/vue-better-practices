@@ -23,12 +23,12 @@ export default {
     ItemCardList,
     SellButton
   },
+  created () {
+    this.getCategories()
+  },
   computed: {
     ...mapState('category', ['categories']),
     ...mapState('shopItem', ['shopItems'])
-  },
-  created () {
-    this.getCategories()
   },
   methods: {
     ...mapActions('category', ['getCategories']),

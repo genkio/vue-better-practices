@@ -4,9 +4,10 @@ const router = require('express').Router()
 const Database = require('../../database')
 
 router.get('/', async (req, res) => {
+  const { categoryId } = req.query
   try {
-    const categories = await Database.getData('/shop-items')
-    res.status(200).json(categories)
+    const shopItems = await Database.getDataByProp('shop-items', 'category_id', Number(categoryId))
+    res.status(200).json(shopItems)
   } catch (err) {
     console.error(err.message)
     res.status(500).json(err.message)

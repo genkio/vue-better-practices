@@ -5,10 +5,17 @@ import shopItem from './modules/shop-item'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   strict: true,
   modules: {
     category,
     shopItem
   }
 })
+
+store.watch(
+  () => store.getters['category/activeCategoryId'],
+  id => store.dispatch('shopItem/getShopItems', id)
+)
+
+export default store

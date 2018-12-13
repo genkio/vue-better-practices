@@ -5,7 +5,7 @@ const Database = require('../../database')
 
 router.get('/', async (req, res) => {
   try {
-    const categories = await Database.getData('/categories')
+    const categories = await Database.getAllData('categories')
     res.status(200).json(categories)
   } catch (err) {
     console.error(err.message)

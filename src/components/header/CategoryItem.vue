@@ -23,9 +23,9 @@ export default {
     }
   },
   computed: {
-    ...mapState('category', ['activeId']),
+    ...mapState('category', ['activeCategoryId']),
     isActive () {
-      return this.category.id === this.activeId
+      return this.category.id === this.activeCategoryId
     }
   },
   methods: {

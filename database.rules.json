@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "shop-items": {
+      ".indexOn": ["category_id"]
+    }
+  }
+}
