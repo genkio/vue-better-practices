@@ -7,12 +7,14 @@ const getters = {
 }
 
 const actions = {
-  getCategories ({ commit }) {
+  getCategories ({ commit, state }) {
     return category.fetchAll()
       .then(data => {
         const [ { id: defaultSelected } ] = data
         commit('SET_CATEGORIES', data)
-        commit('SET_ACTIVE_CATEGORY_ID', defaultSelected)
+        if (!state.activeCategoryId) {
+          commit('SET_ACTIVE_CATEGORY_ID', defaultSelected)
+        }
       })
   },
   selectCategory ({ commit }, id) {
