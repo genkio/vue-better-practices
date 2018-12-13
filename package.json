@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "vue-better-practices",
   "version": "1.0.0",
-  "description": "yet another awesome app",
+  "description": "this project demonstrates some of the better practices I accumulated when developing Vue.js apps",
   "engines": {
     "node": ">= 8.11.4",
     "npm": ">= 4.6.1"
@@ -9,10 +9,14 @@
   "engineStrict": true,
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "deploy:ui": "npm run build && firebase deploy --only hosting",
+    "deploy:api": "firebase deploy --only functions",
+    "deploy:db": "firebase deploy --only database"
   },
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma": "^0.7.2",
     "vue": "^2.5.18",
     "vue-hot-reload-api": "^2.3.1",

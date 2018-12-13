@@ -1,4 +1,5 @@
 .cache
+.firebase
 .firebaserc
 dist
 .runtimeconfig.json
