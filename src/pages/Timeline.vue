@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 import TimelineHeader from '../components/header/TimelineHeader'
 import ItemCardList from '../components/item/ItemCardList'
@@ -27,7 +27,11 @@ export default {
     ...mapState('category', ['categories']),
     ...mapState('shopItem', ['shopItems'])
   },
+  created () {
+    this.getCategories()
+  },
   methods: {
+    ...mapActions('category', ['getCategories']),
     onSell () {}
   }
 }
