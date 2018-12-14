@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import IconButton from '../common/IconButton'
 
 export default {
@@ -43,7 +44,7 @@ export default {
     IconButton
   },
   methods: {
-    toggleLike () {},
+    ...mapActions('shopItem', ['toggleLike']),
     toggleComment () {},
     toggleFlag () {}
   }

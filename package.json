@@ -1,7 +1,7 @@
 {
   "name": "vue-better-practices",
   "version": "1.0.0",
-  "description": "this project demonstrates some of the better practices I accumulated when developing Vue.js apps",
+  "description": "this project show cases some of the better practices I accumulated when developing Vue.js apps",
   "engines": {
     "node": ">= 8.11.4",
     "npm": ">= 4.6.1"

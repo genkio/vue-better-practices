@@ -15,7 +15,7 @@ const actions = {
 
   getShopItem ({ commit }, id) {
     return api.fetchItemById(id)
-      .then(({ data: item }) => {
+      .then(item => {
         commit('SET_ACTIVE_SHOP_ITEM', item)
       })
   },
@@ -26,6 +26,10 @@ const actions = {
 
   searchShopItems ({ commit }, searchTerm) {
     commit('SET_SHOP_ITEM_SEARCH_TERM', searchTerm)
+  },
+
+  toggleLike ({ state }) {
+    state.activeShopItem.like()
   }
 }
 
